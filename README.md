@@ -28,4 +28,4 @@ A modern, responsive marketing and portfolio website for Growth Partnerz, built 
 - `public/` — Static assets
 
 ## License
-TBD 
+TBD # growthparnerz
