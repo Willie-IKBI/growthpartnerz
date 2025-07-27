@@ -11,7 +11,7 @@
     }
   ],
   "functions": {
-    "app/(marketing)/page.js": {
+    "app/page.js": {
       "maxDuration": 30
     }
   }
