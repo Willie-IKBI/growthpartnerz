@@ -9,7 +9,7 @@ export function Newsletter() {
           placeholder="Enter your email"
           className="flex-1 px-4 py-3 rounded-full bg-white/10 text-white placeholder:text-brand-light focus:outline-none focus:ring-2 focus:ring-brand-pink"
         />
-        <button type="submit" className="bg-brand-gradient text-white font-semibold px-8 py-3 rounded-full">
+        <button type="submit" className="bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] text-white font-semibold px-8 py-3 rounded-full">
           Subscribe
         </button>
       </form>

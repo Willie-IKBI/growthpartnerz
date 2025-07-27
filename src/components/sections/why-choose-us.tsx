@@ -9,7 +9,7 @@ export function WhyChooseUs() {
   return (
     <>
       {/* Scrolling marquee line - test with Tailwind default gradient colors */}
-      <div className="w-full overflow-hidden bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 py-2 px-0">
+      <div className="w-full overflow-hidden bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] py-2 px-0">
         <div className="whitespace-nowrap animate-marquee text-white font-semibold text-base md:text-lg tracking-wide">
           <span className="inline-block mr-8">Front-End Development ✦</span>
           <span className="inline-block mr-8">Full-Stack Development ✦</span>
@@ -54,7 +54,7 @@ export function WhyChooseUs() {
         <div className="max-w-6xl mx-auto rounded-3xl bg-white flex flex-col md:flex-row items-center gap-8 md:gap-12 p-6 md:p-12">
           <div className="flex-1 text-center md:text-left">
             <div className="text-sm font-bold text-slate-500 mb-2 tracking-wider">Why choose us</div>
-            <h2 className="text-2xl md:text-4xl font-sora font-light tracking-wide leading-tight text-left mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <h2 className="text-2xl md:text-4xl font-sora font-light tracking-wide leading-tight text-left mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF]">
               Why Businesses <span>Choose</span> <span className="font-bold">Growth Partnerz</span>
             </h2>
             <p className="text-slate-600 mb-2 max-w-lg mx-auto md:mx-0">

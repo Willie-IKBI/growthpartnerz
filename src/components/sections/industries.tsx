@@ -7,7 +7,7 @@ export function Industries() {
       <div className="flex flex-col md:flex-row gap-8 justify-center">
         {industries.map((industry) => (
           <div key={industry.title} className="flex-1 bg-white/5 rounded-xl p-6 shadow-lg flex flex-col items-center">
-            <div className="w-24 h-24 bg-brand-gradient rounded-full mb-4 flex items-center justify-center">
+            <div className="w-24 h-24 bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] rounded-full mb-4 flex items-center justify-center">
               {/* Placeholder for image */}
               <span className="text-white font-bold">Img</span>
             </div>
@@ -17,7 +17,7 @@ export function Industries() {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-brand-gradient text-white font-semibold px-6 py-2 rounded-full">See the full client list</button>
+        <button className="bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] text-white font-semibold px-6 py-2 rounded-full">See the full client list</button>
       </div>
     </section>
   );

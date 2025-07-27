@@ -12,7 +12,7 @@ export function GlassButton({ children, className }: GlassButtonProps) {
   return (
     <Button
       className={cn(
-        'rounded-full bg-gradient-to-r from-[#4C00FF] to-[#FF00C8] px-6 py-1 text-white text-sm md:text-base font-medium hover:opacity-90 transition-all duration-200',
+        'rounded-full bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] px-6 py-1 text-white text-sm md:text-base font-medium hover:opacity-90 transition-all duration-200',
         className
       )}
     >

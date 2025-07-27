@@ -96,13 +96,13 @@ export function Header() {
                 </Link>
                 {isActive && (
                   <span
-                    className="mt-1 h-0.5 w-full rounded-full bg-gradient-to-r from-brand-blue to-brand-pink"
+                    className="mt-1 h-0.5 w-full rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
                     style={{
                       display: 'block',
                       height: '2px',
                       width: '100%',
                       borderRadius: '9999px',
-                      background: 'linear-gradient(to right, #4C00FF, #FF00C8)',
+                      background: 'linear-gradient(to right, #3B82F6, #8B5CF6, #EC4899)',
                       marginTop: '0.25rem',
                     }}
                   />

@@ -7,7 +7,7 @@ export function Testimonials() {
       <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
         {testimonials.map((t) => (
           <div key={t.name} className="flex-1 bg-white/5 rounded-xl p-6 shadow-lg flex flex-col items-center">
-            <div className="w-16 h-16 bg-brand-gradient rounded-full mb-4 flex items-center justify-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] rounded-full mb-4 flex items-center justify-center">
               {/* Placeholder for image */}
               <span className="text-white font-bold">Img</span>
             </div>
@@ -18,7 +18,7 @@ export function Testimonials() {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-brand-gradient text-white font-semibold px-6 py-2 rounded-full">Read More Testimonials</button>
+        <button className="bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] text-white font-semibold px-6 py-2 rounded-full">Read More Testimonials</button>
       </div>
     </section>
   );

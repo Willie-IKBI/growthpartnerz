@@ -20,14 +20,14 @@ export function ProcessSteps() {
       <div className="flex flex-col md:flex-row gap-8 justify-center items-start">
         {steps.map((step, idx) => (
           <div key={step.title} className="flex-1 flex flex-col items-center">
-            <div className="text-6xl font-bold text-brand-gradient mb-2">{idx + 1}</div>
+                            <div className="text-6xl font-bold bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] bg-clip-text text-transparent mb-2">{idx + 1}</div>
             <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
             <p className="text-brand-light text-center max-w-xs">{step.desc}</p>
           </div>
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <button className="bg-brand-gradient text-white font-semibold px-6 py-2 rounded-full">Book Free Strategy Call</button>
+        <button className="bg-gradient-to-r from-[#2300FF] via-[#7B2FF2] to-[#F900BF] text-white font-semibold px-6 py-2 rounded-full">Book Free Strategy Call</button>
       </div>
     </section>
   );
