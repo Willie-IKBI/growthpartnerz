@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  // Disable problematic features
+  experimental: {
+    optimizePackageImports: [],
+  },
 };
 
 export default nextConfig;
