@@ -24,6 +24,31 @@ export function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show/hide header based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHeaderVisible(false); // Hide header when scrolling down
+      } else {
+        setIsHeaderVisible(true); // Show header when scrolling up
+      }
+      
+      // Set scrolled state for styling
+      setIsScrolled(currentScrollY > 50);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window === 'undefined' || window.innerWidth < 768) return;
@@ -54,11 +79,11 @@ export function Header() {
   return (
     <header
       className={cn(
-        'absolute top-0 left-0 w-full z-50',
-        // Removed 'bg-white/5' for custom inline style
-        'backdrop-blur-md border-b border-white/10 shadow-sm'
+        'fixed md:absolute top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out',
+        'backdrop-blur-md border-b border-white/10 shadow-sm',
+        isScrolled ? 'bg-[#0F121A]/95' : 'bg-[#0F121A]/50',
+        !isHeaderVisible ? '-translate-y-full' : 'translate-y-0'
       )}
-      style={{ background: 'rgba(255,255,255,0.02)' }}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -118,7 +143,7 @@ export function Header() {
             onClick={() => setMenuOpen(prev => !prev)}
             aria-label="Toggle navigation"
             aria-expanded={menuOpen}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
             <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M4 6h16M4 12h16M4 18h16" />
@@ -127,7 +152,7 @@ export function Header() {
 
           <div
             className={cn(
-              'absolute top-full right-0 mt-2 bg-[#0F121A] rounded-lg shadow-lg py-4 px-6 flex flex-col gap-4 z-[60] min-w-[180px] transition-all duration-300 ease-in-out',
+              'absolute top-full right-0 mt-2 bg-[#0F121A] rounded-lg shadow-lg py-4 px-6 flex flex-col gap-4 z-[60] min-w-[180px] transition-all duration-300 ease-in-out border border-white/10',
               menuOpen ? 'opacity-100 visible scale-100' : 'opacity-0 invisible scale-95'
             )}
           >
@@ -135,7 +160,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white text-base font-display font-normal px-2 py-1"
+                className="text-white text-base font-display font-normal px-2 py-3 min-h-[44px] flex items-center transition-colors hover:text-blue-400"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}

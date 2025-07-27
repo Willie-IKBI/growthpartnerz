@@ -81,11 +81,11 @@ export function ResultsAndIndustries() {
             <p className="text-white text-center text-lg md:text-xl mb-12 max-w-[800px] mx-auto leading-relaxed">
               Our clients don't just see improvements—they experience transformational growth. Here are some of the results we've delivered for businesses like yours:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
               {results.map((result, idx) => (
                 <div
                   key={idx}
-                  className="group flex flex-col bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-6 min-h-[260px] transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:bg-white hover:backdrop-blur-0 hover:border-gray-100"
+                  className="group flex flex-col bg-white/10 backdrop-blur-md border border-white/30 rounded-xl shadow-lg p-4 md:p-6 min-h-[240px] md:min-h-[260px] transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:bg-white hover:backdrop-blur-0 hover:border-gray-100"
                 >
                   <div className="mb-4 self-start">{result.icon}</div>
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-2 text-left group-hover:text-black transition-colors duration-300">
@@ -109,10 +109,10 @@ export function ResultsAndIndustries() {
             </h2>
                         <div className="bg-white w-screen py-16 pb-20 -ml-[calc(50vw-50%)] -mr-[calc(50vw-50%)]">
               <div className="max-w-7xl mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
                   {industries.map((industry, idx) => (
                     <div key={idx} className="group bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                      <div className="relative h-48 overflow-hidden border border-white/20 p-2">
+                      <div className="relative h-40 md:h-48 overflow-hidden border border-white/20 p-2">
                         <img 
                           src={industry.image} 
                           alt={industry.title}
@@ -124,11 +124,11 @@ export function ResultsAndIndustries() {
                           className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] object-cover rounded-t-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         />
                       </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold text-gray-800 mb-3 text-center tracking-wide">
+                      <div className="p-4 md:p-6">
+                        <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3 text-center tracking-wide">
                           {industry.title}
                         </h3>
-                        <p className="text-gray-600 text-center text-[14.5px] leading-[1.5] tracking-[0.2px]">
+                        <p className="text-gray-600 text-center text-sm md:text-[14.5px] leading-[1.5] tracking-[0.2px]">
                           {industry.description}
                         </p>
                       </div>
